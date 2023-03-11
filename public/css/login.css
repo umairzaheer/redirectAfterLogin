@@ -1,0 +1,116 @@
+.modalDialog {
+    display: none;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
+    justify-content: center;
+}
+
+.modalDialog>div {
+    width: 65%;
+    position: absolute;
+    padding: 5px 20px 13px 20px;
+    background: rgb(255, 255, 255);
+    margin: 2% 30% 0;
+}
+
+.modalDialogLogin {
+    display: none;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
+    justify-content: center;
+}
+
+.modalDialogLogin>div {
+    width: 65%;
+    position: absolute;
+    padding: 5px 20px 13px 20px;
+    background: rgb(255, 255, 255);
+    margin: 2% 30% 0;
+}
+
+.close {
+    color: #000000;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: 10px;
+    right: 26px;
+    width: 19px;
+    text-decoration: none;
+}
+
+.close:hover {
+    background: none;
+    color: #000000;
+}
+
+#DeleteModalLogin{
+    display: none;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
+    justify-content: center;
+}
+
+#DeleteModalLogin>div {
+    width: 65%;
+    position: absolute;
+    padding: 5px 20px 13px 20px;
+    background: rgb(255, 255, 255);
+    margin: 2% 30% 0;
+}
+
+#closeModalLogin{
+    color: #000000;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: 10px;
+    right: 26px;
+    width: 19px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 650px){
+    .modalDialog, #DeleteModalLogin, .modalDialogLogin{
+        margin: 0;
+    }
+}

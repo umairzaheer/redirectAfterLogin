@@ -463,16 +463,17 @@ $(document).ready(function () {
                      }
                      else if(data.rule_for == "registration"){
                         appendData = "search-data-registration";
-                         ("tr#"+data.id).replaceWith(
+                        $("tr#"+data.id).replaceWith(
                             "<tr id="+ data.id +">\
                              <td><span class= 'highlight-warning'>" + data.id + "</span></td>\
-                             <td>" + data.category + "</td>\
-                             <td>" + data.redirect_to + "</td>\
+                             <td>" + category + "</td>\
+                             <td>" + redirectValue + "</td>\
                              <td>" + data.priority + "</td>\
                              <td><button value='" + data.id + "' class='secondary icon-edit edit-rule' id= 'edit-rule' data-id = '" +  data.id +"'></button>\
                              <button value='" + data.id + "' class='secondary icon-trash' id = 'delete-rule'></button></td>\
                             </tr>");
                     }
+                    if(data.rule_for != "registration"){
                     if (response.ctag){
                              var customerTags = "";
                              for (var i = 0; i<appendCtag.length; i++){
@@ -501,6 +502,7 @@ $(document).ready(function () {
                                     <button value='" + data.id + "' class='secondary icon-trash' id = 'delete-rule'></button></td>\
                                     </tr>");
                                 }
+                            }
                             } 
                             else {
                                 $("#success_message").show();

@@ -21,10 +21,16 @@ Route::middleware(['verify.shopify'])->group(function () {
 
      //billing plans
     Route::get('plans',[BillingController::class, 'index'])->name('billing.index');
-    Route::get('changeplan{plan}', [BillingController::class, 'billingPlan'])->name('change.plan'); 
+    Route::get('changeplan{plan}', [BillingController::class, 'billingPlan'])->name('change.plan');
 
+    //user guide
     Route::get('/user-guide',function () {
         return view('userguide.index');
     })->name('guide.index');
+
+     //installation guide
+     Route::get('/installation-guide',function () {
+        return view('installationguide.index');
+      })->name('installationGuide.index');
 });
 

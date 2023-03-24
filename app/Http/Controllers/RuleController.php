@@ -62,6 +62,8 @@ class RuleController extends Controller
         $shop = Auth::user();
         $result = $shop->api()->rest('GET', '/admin/api/2022-04/customers.json', $fields);
         $doubleTags=[];
+        $singleTags=[];
+        $dataArray=[];
         foreach ($result['body']['customers'] as $customer) {
             if ($customer['tags'] != '') {
                 if (str_contains($customer['tags'], ',')) {

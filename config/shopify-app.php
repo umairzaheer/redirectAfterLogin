@@ -150,7 +150,7 @@ return [
     |
     */
 
-    'app_name' => env('SHOPIFY_APP_NAME', 'Shopify App'),
+    'app_name' => env('SHOPIFY_APP_NAME', 'Extendons Redirect After Login'),
 
     /*
     |--------------------------------------------------------------------------

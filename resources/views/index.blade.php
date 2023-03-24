@@ -8,6 +8,7 @@
     <section class="full-width">
         <article>
             <div class="columns eight">
+                <a class="button primary" href="{{ custom_route('installationGuide.index') }}">Installation guide</a>
                 <a class="button secondary" href="{{ custom_route('guide.index') }}"><i class="icon-question append-spacing"></i><span>User Guide</span></a>
                 <a class="button secondary" href="{{route('billing.index',['shop' => Auth::user()->name, 'host' => app('request')->input('host')])}}">
                     <i class="icon-addition append-spacing"></i>

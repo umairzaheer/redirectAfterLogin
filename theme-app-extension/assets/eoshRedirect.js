@@ -24,6 +24,8 @@ var baseUrl = "https://sf-redirectafterlogin.extendons.com/";
       var login = document.getElementById("customer_login");
       if (login) {
         $("#CustomerEmail").change(function () {
+          var disableLoginButton= $('#customer_login').find(":submit");
+          $(disableLoginButton).css("pointer-events", "none");
           var email = document.getElementById("CustomerEmail").value;
           let data = [];
           var fieldHTML = "";
@@ -34,6 +36,7 @@ var baseUrl = "https://sf-redirectafterlogin.extendons.com/";
             crossDomain: true,
             data: { shop: domain, email: email },
             success: function (response) {
+              $(disableLoginButton).css("pointer-events", "all");
               data = response;
               if (
                 data.msg == true &&
